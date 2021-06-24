@@ -42,6 +42,7 @@ const Home = () => {
   return (
     <>
    <SafeAreaView  style={styles.container}>
+     <ScrollView>
     <LinearGradient colors={['#017297', '#0c80a6', '#1f98bf']} style={styles.linearGradient}>
             <View style={s.userContainer}>
                 <Image style={s.userImagen} source={require('./logo.png')} />
@@ -68,7 +69,7 @@ const Home = () => {
                 </View>
 
             </LinearGradient>
-
+            </ScrollView>
             </SafeAreaView>       
 
     </>
@@ -89,6 +90,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
+    backgroundColor: '#1f98bf'
   },
   titulo: {
 
@@ -103,7 +105,8 @@ const styles = StyleSheet.create({
       flex: 1,
       paddingLeft: 15,
       paddingRight: 15,
-      borderRadius: 5
+      borderRadius: 5,
+      paddingBottom: 100
   },
   buttonText: {
       fontSize: 18,
